@@ -1,2 +1,8 @@
+from pickle import FALSE
+from flask_sqlalchemy import SQLAlchemy
+
+
 class config:
-    pass
+    SQLALCHEMY_DATABASE_URI = "sqlite:///data.sqlite"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    DEBUG = True

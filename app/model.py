@@ -1,6 +1,7 @@
 from  .extensions import db
 
-class basemodel(db.Model):
+
+class BaseModel(db.Model):
      
     @staticmethod
     def delete(obj):

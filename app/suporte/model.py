@@ -1,6 +1,16 @@
 from app.extensions import db
-from app.model import basemodel
+from app.model import BaseModel
+from flask import Blueprint
 
-class suporte(basemodel):
+
+
+suporte_api = Blueprint("suporte_api", __name__)
+
+class suporte(BaseModel):
     __tablename__ = "suporte"
-    pass
+
+    id = db.Column(db.Integer, Primary_Key= True)
+    data = db.column(db.String(16))
+    ajuda = db.column(db.String(100))
+    satisfação = db.column(db.integer)
+    cliente = db.column(db.integer, db.ForeignKey("cliente.id"))
