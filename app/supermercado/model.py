@@ -7,10 +7,10 @@ supermercado_api = Blueprint("supermercado_api", __name__)
 class supermercado(BaseModel):
     __tablename__ = "supermercado"
     
-    id = db.Column(db.Integer, Primary_Key= True)
+    id = db.Column(db.Integer , primary_key=True)
     unidade = db.column(db.String(50))
     endereço= db.column(db.String(100))
-    receita = db.column(db.Floting)
-    lucro = db.column(db.Floating)
+    receita = db.column(db.Float)
+    lucro = db.column(db.Float)
     clientes = db.column(db.Integer)
     entregadores = db.relationship("entregador", backref="supermercado")

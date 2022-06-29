@@ -1,4 +1,3 @@
-
 from app.extensions import db
 from app.model import BaseModel
 from flask import Blueprint
@@ -9,7 +8,7 @@ class cliente(BaseModel):
 
     __tablename__ = "cliente"
 
-    id = db.column(db.Integer , Primary_Key= True)
+    id = db.Column(db.Integer , primary_key=True)
     nome = db.column(db.String(100))
     cpf= db.column(db.String(11))
     idade = db.column(db.Integer)

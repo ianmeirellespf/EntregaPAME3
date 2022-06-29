@@ -7,7 +7,7 @@ entregador_api = Blueprint("entregador_api", __name__)
 class entregador(BaseModel):
     __tablename__ = "entregador"
     
-    id = db.Column(db.Integer, Primary_Key= True)
+    id = db.Column(db.Integer , primary_key=True)
     nome = db.column(db.String(100))
     cpf= db.column(db.String(11))
     idade = db.column(db.Integer)
