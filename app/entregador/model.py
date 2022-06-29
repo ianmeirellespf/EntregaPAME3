@@ -12,5 +12,5 @@ class entregador(BaseModel):
     cpf= db.column(db.String(11))
     idade = db.column(db.Integer)
     entregas = db.relationship("entrega", backref="entregador")
-    supermercado = db.column(db.integer, db.ForeignKey("supermercado.id"))
+    supermercado = db.column(db.Integer, db.ForeignKey("supermercado.id"))
     

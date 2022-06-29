@@ -11,7 +11,7 @@ class entrega(BaseModel):
     valor = db.column(db.Floating)
     data= db.column(db.String(16))
     produtos = db.column(db.Integer)
-    entregador = db.column(db.integer, db.ForeignKey("entregador.id"))
+    entregador = db.column(db.Integer, db.ForeignKey("entregador.id"))
     endereçõ = db.column(db.String(100))
-    cliente = db.column(db.integer, db.ForeignKey("cliente.id"))
+    cliente = db.column(db.Integer, db.ForeignKey("cliente.id"))
     

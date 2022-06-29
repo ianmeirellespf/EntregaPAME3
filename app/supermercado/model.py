@@ -12,5 +12,5 @@ class supermercado(BaseModel):
     endereço= db.column(db.String(100))
     receita = db.column(db.Floting)
     lucro = db.column(db.Floating)
-    clientes = db.column(db.integer)
+    clientes = db.column(db.Integer)
     entregadores = db.relationship("entregador", backref="supermercado")

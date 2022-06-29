@@ -12,5 +12,5 @@ class suporte(BaseModel):
     id = db.Column(db.Integer, Primary_Key= True)
     data = db.column(db.String(16))
     ajuda = db.column(db.String(100))
-    satisfação = db.column(db.integer)
-    cliente = db.column(db.integer, db.ForeignKey("cliente.id"))
+    satisfação = db.column(db.Integer)
+    cliente = db.column(db.Integer, db.ForeignKey("cliente.id"))
