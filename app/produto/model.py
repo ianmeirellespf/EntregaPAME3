@@ -11,5 +11,4 @@ class produto(BaseModel):
     nome = db.column(db.String(50))
     valor = db.column(db.Float)
     estoque= db.column(db.Integer)
-    entregadaspresente = db.column(db.Integer)
     validade = db.column(db.String(16))
