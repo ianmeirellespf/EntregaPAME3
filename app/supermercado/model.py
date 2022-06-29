@@ -8,8 +8,8 @@ class supermercado(BaseModel):
     __tablename__ = "supermercado"
     
     id = db.Column(db.Integer , primary_key=True)
-    unidade = db.column(db.String(50))
-    endereço= db.column(db.String(100))
-    receita = db.column(db.Float)
-    lucro = db.column(db.Float)
+    unidade = db.Column(db.String(50))
+    endereço= db.Column(db.String(100))
+    receita = db.Column(db.Float)
+    lucro = db.Column(db.Float)
     entregadores = db.relationship("entregador", backref="supermercado")

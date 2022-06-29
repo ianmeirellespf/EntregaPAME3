@@ -10,8 +10,8 @@ class suporte(BaseModel):
     __tablename__ = "suporte"
 
     id = db.Column(db.Integer , primary_key=True)
-    data = db.column(db.String(16))
-    resolvido = db.column(db.String(6))
-    ajuda = db.column(db.String(100))
-    satisfação = db.column(db.Integer)
-    cliente = db.column(db.Integer, db.ForeignKey("cliente.id"))
+    data = db.Column(db.Date)
+    resolvido = db.Column(db.Boolean)
+    ajuda = db.Column(db.String(100))
+    satisfação = db.Column(db.Integer)
+    cliente = db.Column(db.Integer, db.ForeignKey("cliente.id"))

@@ -8,10 +8,10 @@ class entregador(BaseModel):
     __tablename__ = "entregador"
     
     id = db.Column(db.Integer , primary_key=True)
-    nome = db.column(db.String(100))
-    cpf= db.column(db.String(11))
-    genero= db.column(db.String(16))
-    idade = db.column(db.Integer)
+    nome = db.Column(db.String(100))
+    cpf= db.Column(db.String(11))
+    genero= db.Column(db.String(16))
+    idade = db.Column(db.Integer)
     entregas = db.relationship("entrega", backref="entregador")
-    supermercado = db.column(db.Integer, db.ForeignKey("supermercado.id"))
+    supermercado = db.Column(db.Integer, db.ForeignKey("supermercado.id"))
     

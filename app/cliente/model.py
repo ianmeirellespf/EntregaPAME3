@@ -10,17 +10,17 @@ class clientesupermercado(BaseModel):
 
     id = db.Column(db.Integer , primary_key=True)
 
-    cliente = db.column(db.Integer , db.ForeignKey("cliente.id"))
-    supermercado = db.column(db.Integer , db.ForeignKey("supermercado.id"))
+    cliente = db.Column(db.Integer , db.ForeignKey("cliente.id"))
+    supermercado = db.Column(db.Integer , db.ForeignKey("supermercado.id"))
 class cliente(BaseModel):
 
     __tablename__ = "cliente"
 
     id = db.Column(db.Integer , primary_key=True)
-    nome = db.column(db.String(100))
-    cpf= db.column(db.String(11))
-    ganero= db.column(db.String(16))
-    idade = db.column(db.Integer)
+    nome = db.Column(db.String(100))
+    cpf= db.Column(db.String(11))
+    ganero= db.Column(db.String(16))
+    idade = db.Column(db.Integer)
     pedidos = db.relationship("entrega", backref="cliente")
     supermercados = db.relationship("supermercado", secondary = "cliente_supermercado", backref="clientes")
     suporte = db.relationship("suporte", backref="cliente")

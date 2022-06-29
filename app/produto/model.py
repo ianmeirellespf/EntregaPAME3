@@ -8,7 +8,7 @@ class produto(BaseModel):
     __tablename__ = "produto"
     
     id = db.Column(db.Integer , primary_key=True)
-    nome = db.column(db.String(50))
-    valor = db.column(db.Float)
-    estoque= db.column(db.Integer)
-    validade = db.column(db.String(16))
+    nome = db.Column(db.String(50))
+    valor = db.Column(db.Float)
+    estoque= db.Column(db.Integer)
+    validade = db.Column(db.Date)

@@ -9,17 +9,17 @@ class entregaproduto(BaseModel):
 
     id = db.Column(db.Integer , primary_key=True)
 
-    entrega = db.column(db.Integer , db.ForeignKey("entrega.id"))
-    produto = db.column(db.Integer , db.ForeignKey("produto.id"))
+    entrega = db.Column(db.Integer , db.ForeignKey("entrega.id"))
+    produto = db.Column(db.Integer , db.ForeignKey("produto.id"))
 class entrega(BaseModel):
 
     __tablename__ = "entrega"
 
     id = db.Column(db.Integer , primary_key=True)
-    valor = db.column(db.Float)
-    data= db.column(db.String(16))
+    valor = db.Column(db.Float)
+    data= db.Column(db.Date)
     produtos = db.relationship("produto", secondary = "entrega_produto", backref="entregascontendo")
-    entregador = db.column(db.Integer, db.ForeignKey("entregador.id"))
-    endereçõ = db.column(db.String(100))
-    cliente = db.column(db.Integer, db.ForeignKey("cliente.id"))
+    entregador = db.Column(db.Integer, db.ForeignKey("entregador.id"))
+    endereçõ = db.Column(db.String(100))
+    cliente = db.Column(db.Integer, db.ForeignKey("cliente.id"))
     
