@@ -19,6 +19,7 @@ class cliente(BaseModel):
     id = db.Column(db.Integer , primary_key=True)
     nome = db.column(db.String(100))
     cpf= db.column(db.String(11))
+    ganero= db.column(db.String(16))
     idade = db.column(db.Integer)
     pedidos = db.relationship("entrega", backref="cliente")
     supermercados = db.relationship("supermercado", secondary = "cliente_supermercado", backref="clientes")
