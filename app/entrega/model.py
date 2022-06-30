@@ -21,5 +21,6 @@ class entrega(BaseModel):
     produtos = db.relationship("produto", secondary = "entrega_produto", backref="entregascontendo")
     entregador = db.Column(db.Integer, db.ForeignKey("entregador.id"))
     endereçõ = db.Column(db.String(100))
+    demora= db.Column(db.Time)
     cliente = db.Column(db.Integer, db.ForeignKey("cliente.id"))
     
